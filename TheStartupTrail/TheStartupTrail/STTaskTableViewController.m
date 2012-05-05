@@ -14,11 +14,16 @@
 
 @implementation STTaskTableViewController
 
+@synthesize employees = _employees;
+@synthesize employeeName1, employeeName2, employeeName3, employeeName4;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		self->_employees = [[NSMutableArray alloc] initWithCapacity:8];
     }
     return self;
 }

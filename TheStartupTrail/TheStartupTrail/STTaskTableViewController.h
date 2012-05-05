@@ -9,7 +9,16 @@
 #import "STViewController.h"
 
 @interface STTaskTableViewController : STViewController<UIAlertViewDelegate>
+{
+	NSMutableArray *_employees;
+}
 
+@property (retain, nonatomic, readonly) NSMutableArray* employees;
+
+@property (retain, nonatomic) IBOutlet UILabel* employeeName1;
+@property (retain, nonatomic) IBOutlet UILabel* employeeName2;
+@property (retain, nonatomic) IBOutlet UILabel* employeeName3;
+@property (retain, nonatomic) IBOutlet UILabel* employeeName4;
 
 - (IBAction) assignTaskToEmployee:(id)sender;
 
