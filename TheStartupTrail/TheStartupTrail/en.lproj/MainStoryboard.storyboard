@@ -216,6 +216,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="employee1" destination="X63-U0-Ik3" id="oWI-ra-lUY"/>
+                        <outlet property="employee2" destination="3wj-J6-bQI" id="zjd-KT-pPi"/>
+                        <outlet property="employee3" destination="hD5-Sp-UQG" id="BPE-xX-Jdq"/>
+                        <outlet property="employee4" destination="va5-b3-f3E" id="0DV-Og-Di0"/>
                         <outlet property="employeeClassImg1" destination="ik4-pV-3Y1" id="QJH-DU-ETq"/>
                         <outlet property="employeeClassImg2" destination="gJb-AP-3Ad" id="sTY-1s-ifZ"/>
                         <outlet property="employeeClassImg3" destination="KuC-xL-nuY" id="tKr-oF-1XJ"/>
@@ -247,6 +251,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="assignTaskToEmployee:"/>
+                <relationship kind="outlet" name="employee1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="employee2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="employee3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="employee4" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="employeeClassImg1" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeClassImg2" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeClassImg3" candidateClass="UIImageView"/>
