@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		182025401555A89200A35137 /* STEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820253F1555A89200A35137 /* STEmployee.m */; };
 		183CBEEC1555A42600E9CB41 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183CBEEB1555A42600E9CB41 /* background.png */; };
+		1859C9121555C6330083B9A4 /* design.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90C1555C6330083B9A4 /* design.png */; };
+		1859C9131555C6330083B9A4 /* devel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90D1555C6330083B9A4 /* devel.png */; };
+		1859C9141555C6330083B9A4 /* maint.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90E1555C6330083B9A4 /* maint.png */; };
+		1859C9151555C6330083B9A4 /* MarkRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90F1555C6330083B9A4 /* MarkRes.png */; };
+		1859C9161555C6330083B9A4 /* salesMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C9101555C6330083B9A4 /* salesMark.png */; };
+		1859C9171555C6330083B9A4 /* uxresearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C9111555C6330083B9A4 /* uxresearch.png */; };
 		185E7560155539DA001EB88B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E755F155539DA001EB88B /* UIKit.framework */; };
 		185E7562155539DA001EB88B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E7561155539DA001EB88B /* Foundation.framework */; };
 		185E7564155539DA001EB88B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E7563155539DA001EB88B /* CoreGraphics.framework */; };
@@ -31,6 +37,12 @@
 		1820253E1555A89200A35137 /* STEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmployee.h; sourceTree = "<group>"; };
 		1820253F1555A89200A35137 /* STEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmployee.m; sourceTree = "<group>"; };
 		183CBEEB1555A42600E9CB41 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		1859C90C1555C6330083B9A4 /* design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design.png; sourceTree = "<group>"; };
+		1859C90D1555C6330083B9A4 /* devel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devel.png; sourceTree = "<group>"; };
+		1859C90E1555C6330083B9A4 /* maint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maint.png; sourceTree = "<group>"; };
+		1859C90F1555C6330083B9A4 /* MarkRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarkRes.png; sourceTree = "<group>"; };
+		1859C9101555C6330083B9A4 /* salesMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salesMark.png; sourceTree = "<group>"; };
+		1859C9111555C6330083B9A4 /* uxresearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uxresearch.png; sourceTree = "<group>"; };
 		185E755B155539DA001EB88B /* TheStartupTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStartupTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185E755F155539DA001EB88B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		185E7561155539DA001EB88B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +148,12 @@
 				188AE5F915559A63000961D4 /* hire.png */,
 				188AE5FA15559A63000961D4 /* research.png */,
 				188AE5FB15559A63000961D4 /* top_bar.png */,
+				1859C90C1555C6330083B9A4 /* design.png */,
+				1859C90D1555C6330083B9A4 /* devel.png */,
+				1859C90E1555C6330083B9A4 /* maint.png */,
+				1859C90F1555C6330083B9A4 /* MarkRes.png */,
+				1859C9101555C6330083B9A4 /* salesMark.png */,
+				1859C9111555C6330083B9A4 /* uxresearch.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -201,6 +219,12 @@
 				188AE60115559A63000961D4 /* research.png in Resources */,
 				188AE60215559A63000961D4 /* top_bar.png in Resources */,
 				183CBEEC1555A42600E9CB41 /* background.png in Resources */,
+				1859C9121555C6330083B9A4 /* design.png in Resources */,
+				1859C9131555C6330083B9A4 /* devel.png in Resources */,
+				1859C9141555C6330083B9A4 /* maint.png in Resources */,
+				1859C9151555C6330083B9A4 /* MarkRes.png in Resources */,
+				1859C9161555C6330083B9A4 /* salesMark.png in Resources */,
+				1859C9171555C6330083B9A4 /* uxresearch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

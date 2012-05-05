@@ -194,6 +194,22 @@
                                 <rect key="frame" x="300" y="198" width="51" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="devel.png" id="xiB-Is-Kfp">
+                                <rect key="frame" x="72" y="33" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="devel.png" id="v8E-15-RQS">
+                                <rect key="frame" x="224" y="33" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="devel.png" id="Cu5-BQ-gaE">
+                                <rect key="frame" x="297" y="33" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="devel.png" id="ATU-Ho-cJg">
+                                <rect key="frame" x="148" y="33" width="57" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -203,20 +219,26 @@
                         <outlet property="employeeClassImg1" destination="ik4-pV-3Y1" id="QJH-DU-ETq"/>
                         <outlet property="employeeClassImg2" destination="gJb-AP-3Ad" id="sTY-1s-ifZ"/>
                         <outlet property="employeeClassImg3" destination="KuC-xL-nuY" id="tKr-oF-1XJ"/>
+                        <outlet property="employeeClassImg4" destination="syN-ay-Ati" id="X12-Oy-TlA"/>
                         <outlet property="employeeName1" destination="Ese-my-rNQ" id="dBB-Bo-rK6"/>
                         <outlet property="employeeName2" destination="eEa-ST-lfG" id="Nwr-fM-Yvu"/>
                         <outlet property="employeeName3" destination="DOP-X5-8lz" id="PHT-9N-jsV"/>
                         <outlet property="employeeName4" destination="TQ7-dX-i3a" id="6cF-HF-Iqh"/>
+                        <outlet property="employeeTaskImg1" destination="xiB-Is-Kfp" id="c9A-R2-mv2"/>
+                        <outlet property="employeeTaskImg2" destination="ATU-Ho-cJg" id="mzb-Dy-cvH"/>
+                        <outlet property="employeeTaskImg3" destination="v8E-15-RQS" id="kM0-Pu-aDm"/>
+                        <outlet property="employeeTaskImg4" destination="Cu5-BQ-gaE" id="qFZ-TG-5C5"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="12" y="106"/>
+            <point key="canvasLocation" x="4" y="148"/>
         </scene>
     </scenes>
     <resources>
         <image name="background.png" width="961" height="641"/>
         <image name="bottom_bar.png" width="961" height="103"/>
         <image name="desk.png" width="827" height="194"/>
+        <image name="devel.png" width="115" height="70"/>
         <image name="guy_tie.png" width="268" height="423"/>
         <image name="top_bar.png" width="961" height="69"/>
     </resources>
@@ -233,6 +255,10 @@
                 <relationship kind="outlet" name="employeeName2" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="employeeName3" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="employeeName4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="employeeTaskImg1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="employeeTaskImg2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="employeeTaskImg3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="employeeTaskImg4" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="STViewController" superclassName="UIViewController">

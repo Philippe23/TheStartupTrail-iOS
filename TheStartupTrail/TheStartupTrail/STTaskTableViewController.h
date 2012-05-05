@@ -25,6 +25,10 @@
 @property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg2;
 @property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg3;
 @property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg4;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeTaskImg1;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeTaskImg2;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeTaskImg3;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeTaskImg4;
 
 - (IBAction) assignTaskToEmployee:(id)sender;
 
@@ -32,5 +36,6 @@
 - (void) addEmployee:(STEmployee*)emp;
 - (void) updateEmployeeNameTag:(STEmployee*)emp;
 - (void) doRealInit;
+- (void) onStartTurn;
 
 @end
