@@ -49,4 +49,35 @@
 	}
 }
 
+#pragma mark - Alert View Delegate Methods
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (alertView.cancelButtonIndex == buttonIndex)
+	{
+	}
+	else if (alertView.firstOtherButtonIndex == buttonIndex)
+	{
+		// Design
+	}
+	else if (alertView.firstOtherButtonIndex+1 == buttonIndex)
+	{
+		// Marketing
+	}
+	else if (alertView.firstOtherButtonIndex+2 == buttonIndex)
+	{
+		// Developer
+	}
+}
+
+#pragma mark - actions
+
+- (IBAction) assignTaskToEmployee:(id)sender
+{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Assign task" delegate:self cancelButtonTitle:@"None" otherButtonTitles:@"Design", @"Marketing", @"Develop", nil];
+	
+	[alert show];
+}
+
+
 @end

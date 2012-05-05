@@ -26,6 +26,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="assignTaskToEmployee:" destination="2" eventType="touchUpInside" id="BFs-bc-eNG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3wj-J6-bQI">
                                 <rect key="frame" x="118" y="77" width="117" height="176"/>
@@ -38,6 +41,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="assignTaskToEmployee:" destination="2" eventType="touchUpInside" id="uLd-CM-dmD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hD5-Sp-UQG">
                                 <rect key="frame" x="194" y="77" width="117" height="176"/>
@@ -50,6 +56,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="assignTaskToEmployee:" destination="2" eventType="touchUpInside" id="WaG-v1-JyM"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" id="Pez-Fa-RFZ">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="25"/>
@@ -153,7 +162,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-273" y="112"/>
+            <point key="canvasLocation" x="12" y="106"/>
         </scene>
     </scenes>
     <resources>
@@ -165,6 +174,9 @@
     <classes>
         <class className="STTaskTableViewController" superclassName="STViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="assignTaskToEmployee:"/>
+            </relationships>
         </class>
         <class className="STViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STViewController.h"/>

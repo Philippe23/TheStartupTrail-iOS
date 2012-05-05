@@ -8,6 +8,9 @@
 
 #import "STViewController.h"
 
-@interface STTaskTableViewController : STViewController
+@interface STTaskTableViewController : STViewController<UIAlertViewDelegate>
+
+
+- (IBAction) assignTaskToEmployee:(id)sender;
 
 @end
