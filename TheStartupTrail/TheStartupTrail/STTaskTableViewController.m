@@ -67,28 +67,82 @@
 
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+	UIImageView *img = nil;
+	
+	if (self->_activeEmployee == 0)
+		img = self.employeeTaskImg1;
+	else if (self->_activeEmployee == 1)
+		img = self.employeeTaskImg2;
+	else if (self->_activeEmployee == 2)
+		img = self.employeeTaskImg3;
+	else if (self->_activeEmployee == 4)
+		img = self.employeeTaskImg4;
+	else assert(0);
+	
+	STEmployee *emp = [self.employees objectAtIndex:self->_activeEmployee];
+
 	if (alertView.cancelButtonIndex == buttonIndex)
 	{
+		img.hidden = YES;
+		return;
 	}
-	else if (alertView.firstOtherButtonIndex == buttonIndex)
+	
+	NSString *imgName = nil;
+	switch (emp.employeeType)
 	{
-		// Design
+		case STEmployeeType_Business:
+			if (buttonIndex == alertView.firstOtherButtonIndex)
+				imgName = @"MarkRes";
+			else imgName = @"salesMark";
+			break;
+		
+		case STEmployeeType_Designer:
+			if (buttonIndex == alertView.firstOtherButtonIndex)
+				imgName = @"uxresearch";
+			else imgName = @"design";
+			break;
+		
+		case STEmployeeType_Developer:
+			if (buttonIndex == alertView.firstOtherButtonIndex)
+				imgName = @"maint";
+			else imgName = @"devel";
+			break;
 	}
-	else if (alertView.firstOtherButtonIndex+1 == buttonIndex)
-	{
-		// Marketing
-	}
-	else if (alertView.firstOtherButtonIndex+2 == buttonIndex)
-	{
-		// Developer
-	}
+	assert(imgName);
+	
+	img.image = [UIImage imageNamed:imgName];
+	img.hidden = NO;
 }
 
 #pragma mark - actions
 
 - (IBAction) assignTaskToEmployee:(id)sender
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Assign task" delegate:self cancelButtonTitle:@"None" otherButtonTitles:@"Design", @"Marketing", @"Develop", nil];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Assign task" delegate:self cancelButtonTitle:@"None" otherButtonTitles:nil];
+	
+	unsigned empNo = [self getEmployeeNumFromButton:sender];
+	STEmployee *emp = [self.employees objectAtIndex:empNo];
+	assert(emp);
+	
+	switch (emp.employeeType) 
+	{
+		case STEmployeeType_Business:
+			[alert addButtonWithTitle:@"Market Research"];
+			[alert addButtonWithTitle:@"Sales & Marketing"];
+			break;
+		
+		case STEmployeeType_Designer:
+			[alert addButtonWithTitle:@"UX Research"];
+			[alert addButtonWithTitle:@"Design"];
+			break;
+		
+		case STEmployeeType_Developer:
+			[alert addButtonWithTitle:@"Maintenance"];
+			[alert addButtonWithTitle:@"New Features"];
+			break;
+	}
+	
+	self->_activeEmployee = empNo;
 	
 	[alert show];
 }
@@ -144,6 +198,21 @@
 	self.employeeTaskImg2.hidden = YES;
 	self.employeeTaskImg3.hidden = YES;
 	self.employeeTaskImg4.hidden = YES;
+}
+
+- (unsigned) getEmployeeNumFromButton:(UIButton*)button
+{
+	if (button == self.employee1)
+		return 0;
+	else if (button == self.employee2)
+		return 1;
+	else if (button == self.employee3)
+		return 2;
+	else if (button == self.employee4)
+		return 3;
+	
+	assert(0);
+	return 999;
 }
 
 @end

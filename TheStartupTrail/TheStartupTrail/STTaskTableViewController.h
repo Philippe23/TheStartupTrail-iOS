@@ -13,6 +13,7 @@
 @interface STTaskTableViewController : STViewController<UIAlertViewDelegate>
 {
 	NSMutableArray *_employees;
+	unsigned _activeEmployee;
 }
 
 @property (retain, nonatomic, readonly) NSMutableArray* employees;
@@ -41,5 +42,7 @@
 - (void) updateEmployeeNameTag:(STEmployee*)emp;
 - (void) doRealInit;
 - (void) onStartTurn;
+
+- (unsigned) getEmployeeNumFromButton:(UIButton*)button;
 
 @end
