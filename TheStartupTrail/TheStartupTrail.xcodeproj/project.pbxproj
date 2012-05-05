@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182025401555A89200A35137 /* STEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820253F1555A89200A35137 /* STEmployee.m */; };
 		183CBEEC1555A42600E9CB41 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183CBEEB1555A42600E9CB41 /* background.png */; };
 		185E7560155539DA001EB88B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E755F155539DA001EB88B /* UIKit.framework */; };
 		185E7562155539DA001EB88B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E7561155539DA001EB88B /* Foundation.framework */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1820253E1555A89200A35137 /* STEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmployee.h; sourceTree = "<group>"; };
+		1820253F1555A89200A35137 /* STEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmployee.m; sourceTree = "<group>"; };
 		183CBEEB1555A42600E9CB41 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		185E755B155539DA001EB88B /* TheStartupTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStartupTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185E755F155539DA001EB88B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -102,6 +105,8 @@
 				185E7571155539DA001EB88B /* MainStoryboard.storyboard */,
 				185E7574155539DA001EB88B /* STViewController.h */,
 				185E7575155539DA001EB88B /* STViewController.m */,
+				1820253E1555A89200A35137 /* STEmployee.h */,
+				1820253F1555A89200A35137 /* STEmployee.m */,
 				186B8E8715559D9D00966467 /* STTaskTableViewController.h */,
 				186B8E8815559D9D00966467 /* STTaskTableViewController.m */,
 				185E7566155539DA001EB88B /* Supporting Files */,
@@ -210,6 +215,7 @@
 				185E7570155539DA001EB88B /* STAppDelegate.m in Sources */,
 				185E7576155539DA001EB88B /* STViewController.m in Sources */,
 				186B8E8915559D9D00966467 /* STTaskTableViewController.m in Sources */,
+				182025401555A89200A35137 /* STEmployee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
