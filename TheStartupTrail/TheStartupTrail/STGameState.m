@@ -98,8 +98,17 @@ STGameState *f_game_state = nil;
 - (void) updateNumbers
 {
 	unsigned const i = self.turnNumber-1;
-	struct MonthlyNumbers *last_mn = &self->_numbers[i-1];
+	struct MonthlyNumbers start_nums;
+	struct MonthlyNumbers const *last_mn = &self->_numbers[i-1];
 	struct MonthlyNumbers *mn = &self->_numbers[i];
+	
+	memset(&start_nums, 0, sizeof(start_nums));
+	
+	if (i < 1)
+	{
+		last_mn = &start_nums;
+		start_nums.cashInBank = mn->cashInBank;
+	}
 	
 	mn->customersWon  = last_mn->sales * self->customersPerBiz;
 	mn->customersWon += last_mn->numFeatures * self->customersPerFeature;
