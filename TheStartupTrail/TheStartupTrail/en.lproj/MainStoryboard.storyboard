@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background.png" id="44p-n3-G27">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X63-U0-Ik3">
                                 <rect key="frame" x="42" y="77" width="117" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -166,6 +170,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background.png" width="961" height="641"/>
         <image name="bottom_bar.png" width="961" height="103"/>
         <image name="desk.png" width="827" height="194"/>
         <image name="guy_tie.png" width="268" height="423"/>

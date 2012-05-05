@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183CBEEC1555A42600E9CB41 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183CBEEB1555A42600E9CB41 /* background.png */; };
 		185E7560155539DA001EB88B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E755F155539DA001EB88B /* UIKit.framework */; };
 		185E7562155539DA001EB88B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E7561155539DA001EB88B /* Foundation.framework */; };
 		185E7564155539DA001EB88B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185E7563155539DA001EB88B /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183CBEEB1555A42600E9CB41 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		185E755B155539DA001EB88B /* TheStartupTrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheStartupTrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185E755F155539DA001EB88B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		185E7561155539DA001EB88B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 		188AE5F315559A4B000961D4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				183CBEEB1555A42600E9CB41 /* background.png */,
 				188AE5F515559A63000961D4 /* bottom_bar.png */,
 				188AE5F615559A63000961D4 /* desk.png */,
 				188AE5F715559A63000961D4 /* fire.png */,
@@ -192,6 +195,7 @@
 				188AE60015559A63000961D4 /* hire.png in Resources */,
 				188AE60115559A63000961D4 /* research.png in Resources */,
 				188AE60215559A63000961D4 /* top_bar.png in Resources */,
+				183CBEEC1555A42600E9CB41 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
