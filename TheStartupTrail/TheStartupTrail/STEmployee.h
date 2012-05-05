@@ -26,5 +26,6 @@ typedef enum _STEmployeeType
 @property (retain) NSString *name;
 
 - (id) initWithName:(NSString*)name type:(STEmployeeType)type andLevel:(unsigned)level;
+- (id) initStarterWithType:(STEmployeeType)type;
 
 @end

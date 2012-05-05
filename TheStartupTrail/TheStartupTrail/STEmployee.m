@@ -28,5 +28,21 @@
 	return self;
 }
 
+- (id) initStarterWithType:(STEmployeeType)t
+{
+	NSString *names[] = {
+			@"David",
+			@"Matt",
+			@"Mark",
+			@"Ryan",
+			@"Steve",
+			@"Jim",
+			@"Han"
+		};
+	
+	unsigned n = random() % (sizeof(names)/sizeof(names[0]));
+	
+	return [self initWithName:names[n] type:t andLevel:1];
+}
 
 @end
