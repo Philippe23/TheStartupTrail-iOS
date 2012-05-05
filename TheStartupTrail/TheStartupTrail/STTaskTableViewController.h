@@ -21,6 +21,10 @@
 @property (retain, nonatomic) IBOutlet UILabel* employeeName2;
 @property (retain, nonatomic) IBOutlet UILabel* employeeName3;
 @property (retain, nonatomic) IBOutlet UILabel* employeeName4;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg1;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg2;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg3;
+@property (retain, nonatomic) IBOutlet UIImageView* employeeClassImg4;
 
 - (IBAction) assignTaskToEmployee:(id)sender;
 

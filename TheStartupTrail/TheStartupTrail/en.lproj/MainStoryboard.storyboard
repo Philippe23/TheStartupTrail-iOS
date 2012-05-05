@@ -178,12 +178,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="ik4-pV-3Y1">
+                                <rect key="frame" x="75" y="198" width="51" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="gJb-AP-3Ad">
+                                <rect key="frame" x="151" y="198" width="51" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="KuC-xL-nuY">
+                                <rect key="frame" x="227" y="198" width="51" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="syN-ay-Ati">
+                                <rect key="frame" x="300" y="198" width="51" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="employeeClassImg1" destination="ik4-pV-3Y1" id="QJH-DU-ETq"/>
+                        <outlet property="employeeClassImg2" destination="gJb-AP-3Ad" id="sTY-1s-ifZ"/>
+                        <outlet property="employeeClassImg3" destination="KuC-xL-nuY" id="tKr-oF-1XJ"/>
                         <outlet property="employeeName1" destination="Ese-my-rNQ" id="dBB-Bo-rK6"/>
                         <outlet property="employeeName2" destination="eEa-ST-lfG" id="Nwr-fM-Yvu"/>
                         <outlet property="employeeName3" destination="DOP-X5-8lz" id="PHT-9N-jsV"/>
@@ -206,6 +225,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="assignTaskToEmployee:"/>
+                <relationship kind="outlet" name="employeeClassImg1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="employeeClassImg2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="employeeClassImg3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="employeeClassImg4" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeName1" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="employeeName2" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="employeeName3" candidateClass="UILabel"/>

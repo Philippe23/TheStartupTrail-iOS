@@ -17,6 +17,7 @@
 
 @synthesize employees = _employees;
 @synthesize employeeName1, employeeName2, employeeName3, employeeName4;
+@synthesize employeeClassImg1, employeeClassImg2, employeeClassImg3, employeeClassImg4;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
