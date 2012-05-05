@@ -27,5 +27,6 @@
 
 - (void) addEmployee:(STEmployee*)emp;
 - (void) updateEmployeeNameTag:(STEmployee*)emp;
+- (void) doRealInit;
 
 @end

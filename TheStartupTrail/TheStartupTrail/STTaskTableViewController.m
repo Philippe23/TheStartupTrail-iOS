@@ -24,18 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		self->_employees = [[NSMutableArray alloc] initWithCapacity:8];
-		
-		// Generate Employees.
-		STEmployee *emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Business];
-		[self addEmployee:emp];
-		[emp release];
-		emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Designer];
-		[self addEmployee:emp];
-		[emp release];
-		emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Developer];
-		[self addEmployee:emp];
-		[emp release];
+		[self doRealInit];
     }
     return self;
 }
@@ -44,6 +33,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	
+	[self doRealInit];
 	
 	for (STEmployee *e in self.employees)
 		[self updateEmployeeNameTag:e];
@@ -123,6 +114,25 @@
 	else if (idx == 3)
 		self.employeeName4.text = emp.name;
 	else assert(0);
+}
+
+- (void) doRealInit
+{
+	if (self->_employees)
+		return;
+	
+	self->_employees = [[NSMutableArray alloc] initWithCapacity:8];
+	
+	// Generate Employees.
+	STEmployee *emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Business];
+	[self addEmployee:emp];
+	[emp release];
+	emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Designer];
+	[self addEmployee:emp];
+	[emp release];
+	emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Developer];
+	[self addEmployee:emp];
+	[emp release];
 }
 
 @end
