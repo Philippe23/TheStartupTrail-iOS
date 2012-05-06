@@ -358,11 +358,11 @@
             </objects>
             <point key="canvasLocation" x="-1415" y="393"/>
         </scene>
-        <!--Sponsor Hack View Controller View Controller-->
+        <!--Sponsor Hack View Controller-->
         <scene sceneID="vee-7b-aoX">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paz-Pg-qJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Z3X-By-LT3" customClass="STSponsorHackViewControllerViewController" sceneMemberID="viewController">
+                <viewController id="Z3X-By-LT3" customClass="STSponsorHackViewController" sceneMemberID="viewController">
                     <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="amY-s8-fQN">
                         <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -400,12 +400,6 @@
         <image name="top_bar.png" width="961" height="69"/>
     </resources>
     <classes>
-        <class className="STSponsorHackViewControllerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSponsorHackViewControllerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="popOffNav:"/>
-            </relationships>
-        </class>
         <class className="STTaskTableViewController" superclassName="STViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskTableViewController.h"/>
             <relationships>

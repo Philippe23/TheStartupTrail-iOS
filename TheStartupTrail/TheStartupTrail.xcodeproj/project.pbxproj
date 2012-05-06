@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		182025401555A89200A35137 /* STEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820253F1555A89200A35137 /* STEmployee.m */; };
 		1833F0EB1556E48900D8E3E6 /* sponsors_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1833F0EA1556E48900D8E3E6 /* sponsors_screen.png */; };
-		1833F0EF1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1833F0EE1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.m */; };
+		1833F0EF1556EBEB00D8E3E6 /* STSponsorHackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1833F0EE1556EBEB00D8E3E6 /* STSponsorHackViewController.m */; };
 		183CBEEC1555A42600E9CB41 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183CBEEB1555A42600E9CB41 /* background.png */; };
 		18573C5B1555FAA000CCFF6B /* biz_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 18573C581555FAA000CCFF6B /* biz_man.png */; };
 		18573C5C1555FAA000CCFF6B /* designer.png in Resources */ = {isa = PBXBuildFile; fileRef = 18573C591555FAA000CCFF6B /* designer.png */; };
@@ -51,8 +51,8 @@
 		1820253E1555A89200A35137 /* STEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmployee.h; sourceTree = "<group>"; };
 		1820253F1555A89200A35137 /* STEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmployee.m; sourceTree = "<group>"; };
 		1833F0EA1556E48900D8E3E6 /* sponsors_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sponsors_screen.png; path = ../../../../Desktop/Desktop/xxx/sponsors_screen.png; sourceTree = "<group>"; };
-		1833F0ED1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSponsorHackViewControllerViewController.h; sourceTree = "<group>"; };
-		1833F0EE1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSponsorHackViewControllerViewController.m; sourceTree = "<group>"; };
+		1833F0ED1556EBEB00D8E3E6 /* STSponsorHackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = STSponsorHackViewController.h; sourceTree = "<group>"; };
+		1833F0EE1556EBEB00D8E3E6 /* STSponsorHackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSponsorHackViewController.m; sourceTree = "<group>"; };
 		183CBEEB1555A42600E9CB41 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		18573C581555FAA000CCFF6B /* biz_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biz_man.png; sourceTree = "<group>"; };
 		18573C591555FAA000CCFF6B /* designer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = designer.png; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 				186B8E8815559D9D00966467 /* STTaskTableViewController.m */,
 				185DFE141555D283004F42B6 /* STGameState.h */,
 				185DFE151555D283004F42B6 /* STGameState.m */,
-				1833F0ED1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.h */,
-				1833F0EE1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.m */,
+				1833F0ED1556EBEB00D8E3E6 /* STSponsorHackViewController.h */,
+				1833F0EE1556EBEB00D8E3E6 /* STSponsorHackViewController.m */,
 				185E7566155539DA001EB88B /* Supporting Files */,
 			);
 			path = TheStartupTrail;
@@ -299,7 +299,7 @@
 				186B8E8915559D9D00966467 /* STTaskTableViewController.m in Sources */,
 				182025401555A89200A35137 /* STEmployee.m in Sources */,
 				185DFE161555D283004F42B6 /* STGameState.m in Sources */,
-				1833F0EF1556EBEB00D8E3E6 /* STSponsorHackViewControllerViewController.m in Sources */,
+				1833F0EF1556EBEB00D8E3E6 /* STSponsorHackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
