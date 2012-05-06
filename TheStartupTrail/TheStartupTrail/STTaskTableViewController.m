@@ -90,6 +90,8 @@
 	if (alertView.cancelButtonIndex == buttonIndex)
 	{
 		img.hidden = YES;
+		emp.task = STEmployeeTask_None;
+		[self updateStatusBarData];
 		return;
 	}
 	
