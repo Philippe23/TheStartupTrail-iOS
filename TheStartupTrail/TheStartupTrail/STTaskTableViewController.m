@@ -17,7 +17,7 @@
 
 @synthesize employees = _employees;
 @synthesize employeeName1, employeeName2, employeeName3, employeeName4;
-@synthesize employeeClassImg1, employeeClassImg2, employeeClassImg3, employeeClassImg4;
+@synthesize employeeNameplate1, employeeNameplate2, employeeNameplate3, employeeNameplate4;
 @synthesize employeeTaskImg1, employeeTaskImg2, employeeTaskImg3, employeeTaskImg4;
 @synthesize employee1, employee2, employee3, employee4;
 
@@ -163,13 +163,25 @@
 	assert(idx >= 0);
 	
 	if (idx == 0)
+	{
 		self.employeeName1.text = emp.name;
+		self.employeeNameplate1.hidden = NO;
+	}
 	else if (idx == 1)
+	{
 		self.employeeName2.text = emp.name;
+		self.employeeNameplate2.hidden = NO;
+	}
 	else if (idx == 2)
+	{
 		self.employeeName3.text = emp.name;
+		self.employeeNameplate3.hidden = NO;
+	}
 	else if (idx == 3)
+	{
 		self.employeeName4.text = emp.name;
+		self.employeeNameplate4.hidden = NO;
+	}
 	else assert(0);
 }
 
