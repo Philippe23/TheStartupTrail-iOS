@@ -151,8 +151,7 @@
 
 - (IBAction) assignTaskToEmployee:(id)sender
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Assign task" delegate:self cancelButtonTitle:@"None" otherButtonTitles:nil];
-	
+	NSString* buttons[2] = { NULL, NULL };
 	unsigned empNo = [self getEmployeeNumFromButton:sender];
 	STEmployee *emp = [self.employees objectAtIndex:empNo];
 	assert(emp);
@@ -160,22 +159,24 @@
 	switch (emp.employeeType) 
 	{
 		case STEmployeeType_Business:
-			[alert addButtonWithTitle:@"Market Research"];
-			[alert addButtonWithTitle:@"Sales & Marketing"];
+			buttons[0] = @"Market Research";
+			buttons[1] = @"Sales & Marketing";
 			break;
 		
 		case STEmployeeType_Designer:
-			[alert addButtonWithTitle:@"UX Research"];
-			[alert addButtonWithTitle:@"Design"];
+			buttons[0] = @"UX Research";
+			buttons[1] = @"Design";
 			break;
 		
 		case STEmployeeType_Developer:
-			[alert addButtonWithTitle:@"Maintenance"];
-			[alert addButtonWithTitle:@"New Features"];
+			buttons[0] = @"Maintenance";
+			buttons[1] = @"New Features";
 			break;
 	}
 	
 	self->_activeEmployee = empNo;
+
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Assign task" delegate:self cancelButtonTitle:@"None" otherButtonTitles:buttons[0], buttons[1], nil];
 	
 	[alert show];
 }
@@ -187,6 +188,16 @@
 	[gstate nextTurn];
 	[gstate updateNumbers];
 	
+	// De-task employees.
+	for (STEmployee *e in self.employees)
+		e.task = STEmployeeTask_None;
+
+	self.employeeTaskImg1.hidden = YES;
+	self.employeeTaskImg2.hidden = YES;
+	self.employeeTaskImg3.hidden = YES;
+	self.employeeTaskImg4.hidden = YES;
+	
+	// Update status bar.
 	[self updateStatusBarData];
 }
 
