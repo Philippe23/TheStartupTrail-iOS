@@ -93,29 +93,54 @@
 		return;
 	}
 	
+	STEmployeeTask task = STEmployeeTask_None;
 	NSString *imgName = nil;
 	switch (emp.employeeType)
 	{
 		case STEmployeeType_Business:
 			if (buttonIndex == alertView.firstOtherButtonIndex)
+			{
 				imgName = @"MarkRes";
-			else imgName = @"salesMark";
+				task = STEmployeeTask_MarketResearch;
+			}
+			else
+			{
+				imgName = @"salesMark";
+				task = STEmployeeTask_Sales;
+			}
 			break;
 		
 		case STEmployeeType_Designer:
 			if (buttonIndex == alertView.firstOtherButtonIndex)
+			{
 				imgName = @"uxresearch";
-			else imgName = @"design";
+				task = STEmployeeTask_UX_Design;
+			}
+			else
+			{
+				imgName = @"design";
+				task = STEmployeeTask_Design;
+			}
 			break;
 		
 		case STEmployeeType_Developer:
 			if (buttonIndex == alertView.firstOtherButtonIndex)
+			{
 				imgName = @"maint";
-			else imgName = @"devel";
+				task = STEmployeeTask_Maint;
+			}
+			else
+			{
+				imgName = @"devel";
+				task = STEmployeeTask_NewDev;
+			}
 			break;
 	}
 	assert(imgName);
 	
+	emp.task = task;
+	[self updateStatusBarData];
+
 	img.image = [UIImage imageNamed:imgName];
 	img.hidden = NO;
 }
@@ -335,6 +360,46 @@
 	STGameState *state = [STGameState sharedGameState];
 	[state updateNumbers];
 	struct MonthlyNumbers *mn = [state getThisMonthsNumbers];
+	
+	mn->marketResearch = 0;
+	mn->sales = 0;
+	mn->features_work = 0;
+	mn->maint_work = 0;
+	mn->design_work = 0;
+	mn->ux_research = 0;
+	
+	for (STEmployee *e in self.employees)
+	{
+		switch (e.task)
+		{
+			case STEmployeeTask_None:
+				break;
+			
+			case STEmployeeTask_Maint:
+				++(mn->maint_work);
+				break;
+			
+			case STEmployeeTask_NewDev:
+				++(mn->features_work);
+				break;
+			
+			case STEmployeeTask_Sales:
+				++(mn->sales);
+				break;
+			
+			case STEmployeeTask_MarketResearch:
+				++(mn->marketResearch);
+				break;
+			
+			case STEmployeeTask_Design:
+				++(mn->design_work);
+				break;
+			
+			case STEmployeeTask_UX_Design:
+				++(mn->ux_research);
+				break;
+		}
+	}
 	
 	self.turnLabel.text = [NSString stringWithFormat:@"%u", mn->turnNum];
 	
