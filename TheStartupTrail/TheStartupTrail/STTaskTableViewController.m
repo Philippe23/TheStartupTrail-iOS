@@ -317,7 +317,11 @@
 		self.cashFlowLabel.textColor = [UIColor redColor];
 		str = [str stringByAppendingFormat:@"(%@)", str];
 	}
-	else self.cashFlowLabel.textColor = [UIColor blackColor];
+	else
+	{
+		self.cashFlowLabel.textColor = [UIColor blackColor];
+		str = [@"+" stringByAppendingString:str];
+	}
 	
 	self.cashFlowLabel.text = str;
 	
