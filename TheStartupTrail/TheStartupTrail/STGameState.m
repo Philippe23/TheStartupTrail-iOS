@@ -167,7 +167,7 @@ STGameState *f_game_state = nil;
 {
 	unsigned i = self.turnNumber;
 	assert(i > 0);
-	return &self->_numbers[i-1];
+	return &self->_numbers[i];
 }
 
 @end
