@@ -294,6 +294,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="cashFlowLabel" destination="Phg-Tp-wOo" id="Zgh-VD-LWy"/>
                         <outlet property="custCountIcon" destination="vxH-cy-RVR" id="Kmb-Oy-fgN"/>
                         <outlet property="custCountInner" destination="xAt-hU-p2o" id="RT0-j9-M0a"/>
                         <outlet property="custCountLabel" destination="PlV-8t-bgt" id="PLK-aN-idx"/>
@@ -314,6 +315,7 @@
                         <outlet property="employeeTaskImg2" destination="ATU-Ho-cJg" id="mzb-Dy-cvH"/>
                         <outlet property="employeeTaskImg3" destination="v8E-15-RQS" id="kM0-Pu-aDm"/>
                         <outlet property="employeeTaskImg4" destination="Cu5-BQ-gaE" id="qFZ-TG-5C5"/>
+                        <outlet property="moneyInBankLabel" destination="mNA-EL-GIv" id="eHd-kB-l0E"/>
                         <outlet property="productCountIcon" destination="pAC-1I-EZG" id="h4A-la-An5"/>
                         <outlet property="productCountInner" destination="1zh-vB-L7f" id="COs-ms-RKh"/>
                         <outlet property="productCountLabel" destination="7HE-P1-A6C" id="NJP-Ab-pNY"/>
@@ -342,6 +344,7 @@
             <relationships>
                 <relationship kind="action" name="assignTaskToEmployee:"/>
                 <relationship kind="action" name="endTurn:"/>
+                <relationship kind="outlet" name="cashFlowLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="custCountIcon" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="custCountInner" candidateClass="UIView"/>
                 <relationship kind="outlet" name="custCountLabel" candidateClass="UILabel"/>
@@ -362,6 +365,7 @@
                 <relationship kind="outlet" name="employeeTaskImg2" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeTaskImg3" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeTaskImg4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="moneyInBankLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="productCountIcon" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="productCountInner" candidateClass="UIView"/>
                 <relationship kind="outlet" name="productCountLabel" candidateClass="UILabel"/>

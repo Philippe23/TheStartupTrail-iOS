@@ -22,6 +22,7 @@
 @synthesize employee1, employee2, employee3, employee4;
 @synthesize custCountIcon, custCountInner, custCountOuter, custCountLabel;
 @synthesize productCountIcon, productCountInner, productCountOutter, productCountLabel;
+@synthesize moneyInBankLabel, cashFlowLabel;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -284,6 +285,45 @@
 	[self updateStatusBarLayout];
 }
 
+- (void) setMoneyInBank:(int64_t)money
+{
+	NSNumber *num = [[NSNumber alloc] initWithDouble:(double)money];
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+	formatter.maximumFractionDigits = 0;
+	NSString *str = [formatter stringFromNumber:num];
+	[formatter release], formatter = nil;
+	[num release], num = nil;
+	
+	self.moneyInBankLabel.text = str;
+	
+	[self updateStatusBarLayout];
+}
+
+- (void) setCashFlow:(int64_t)cash
+{
+	NSNumber *num = [[NSNumber alloc] initWithDouble:(double)cash];
+	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+	formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+	formatter.maximumFractionDigits = 0;
+	NSString *str = [formatter stringFromNumber:num];
+	[formatter release], formatter = nil;
+	[num release], num = nil;
+	
+	if (cash < 0.0f)
+	{
+		self.cashFlowLabel.textColor = [UIColor redColor];
+		str = [str stringByAppendingFormat:@"(%@)", str];
+	}
+	else self.cashFlowLabel.textColor = [UIColor blackColor];
+	
+	self.cashFlowLabel.text = str;
+	
+	[self updateStatusBarLayout];
+}
+
+
+
 - (void) updateStatusBarLayout
 {
 	[self sizeBox:self.custCountOuter
@@ -295,6 +335,9 @@
 		 innerBox:self.productCountInner
 			 icon:self.productCountIcon
 	   toFitLabel:self.productCountLabel];
+	   
+	   
+
 }
 
 - (void) sizeBox:(UIView *)outerBox 

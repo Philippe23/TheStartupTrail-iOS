@@ -43,6 +43,8 @@
 @property (retain, nonatomic) IBOutlet UIView *productCountInner;
 @property (retain, nonatomic) IBOutlet UIImageView *productCountIcon;
 @property (retain, nonatomic) IBOutlet UILabel *productCountLabel;
+@property (retain, nonatomic) IBOutlet UILabel *moneyInBankLabel;
+@property (retain, nonatomic) IBOutlet UILabel *cashFlowLabel;
 
 - (IBAction) assignTaskToEmployee:(id)sender;
 - (IBAction) endTurn:(id)sender;
@@ -57,6 +59,8 @@
 
 - (void) setCustomerCount:(unsigned)customerCount;
 - (void) setProductCount:(unsigned)productCount;
+- (void) setMoneyInBank:(int64_t)money;
+- (void) setCashFlow:(int64_t)cash;
 
 - (void) updateStatusBarLayout;
 - (void) sizeBox:(UIView*)outerBox innerBox:(UIView*)innerbox icon:(UIImageView*)icon toFitLabel:(UILabel*)label;
