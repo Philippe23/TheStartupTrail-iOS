@@ -137,21 +137,28 @@ STGameState *f_game_state = nil;
 	// :BUG: This doesn't look right.
 	mn->design += MIN(t, mn->design);
 	
-	mn->complexity = mn->numFeatures - mn->design;
-	mn->complexity = (unsigned)powf(mn->complexity, 1.2f);
+	if (mn->numFeatures > mn->design)
+	{
+		mn->complexity = mn->numFeatures - mn->design;
+		mn->complexity = (unsigned)powf(mn->complexity, 1.2f);
+	}
+	else mn->complexity = 0;
 	
 	mn->maint = (unsigned)roundf(last_mn->numCustomers * self->maintRate);
-	
+
+/*	
 	mn->marketResearch = 0;
 	mn->sales = 0;
 	mn->features_work = 0;
 	mn->maint_work = 0;
 	mn->design_work = 0;
 	mn->ux_research = 0;
+*/
 	
 	t = self.turnNumber + 1;
-	mn->price = mn->numFeatures - t;
-	mn->price = MAX(mn->price, 0);
+	if (mn->numFeatures >= t)
+		mn->price = mn->numFeatures - t;
+	else mn->price = 0;
 	mn->price *= self->pricePerFeature;
 	
 	mn->expenses = self.employees.count * self->costPerEmployee;
