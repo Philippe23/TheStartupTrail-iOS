@@ -39,7 +39,7 @@ STGameState *f_game_state = nil;
 		f_game_state->userStoriesPerBiz = 1;
 		
 		f_game_state->costPerEmployee = 8000;
-		f_game_state->pricePerFeature = 5;
+		f_game_state->pricePerFeature = 50;
 		f_game_state->customersLostDueToComplexity = 50;
 		f_game_state->maintRate = 0.001f;
 		f_game_state->customersLostDueToMaint = 50;
@@ -156,9 +156,9 @@ STGameState *f_game_state = nil;
 */
 	
 	t = self.turnNumber + 1;
-	if (mn->numFeatures >= t)
+	if (mn->numFeatures > t)
 		mn->price = mn->numFeatures - t;
-	else mn->price = 0;
+	else mn->price = 1;
 	mn->price *= self->pricePerFeature;
 	
 	mn->expenses = self.employees.count * self->costPerEmployee;
