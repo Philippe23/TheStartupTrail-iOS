@@ -16,7 +16,6 @@
 
 @implementation STTaskTableViewController
 
-@synthesize employees = _employees;
 @synthesize employeeName1, employeeName2, employeeName3, employeeName4;
 @synthesize employeeNameplate1, employeeNameplate2, employeeNameplate3, employeeNameplate4;
 @synthesize employeeTaskImg1, employeeTaskImg2, employeeTaskImg3, employeeTaskImg4;
@@ -165,6 +164,11 @@
 
 #pragma mark - Employeemanagement
 
+- (NSMutableArray*) employees
+{
+	return [STGameState sharedGameState].employees;
+}
+
 - (void) addEmployee:(STEmployee *)emp
 {
 	assert(emp);
@@ -226,11 +230,6 @@
 
 - (void) doRealInit
 {
-	if (self->_employees)
-		return;
-	
-	self->_employees = [[NSMutableArray alloc] initWithCapacity:8];
-	
 	// Generate Employees.
 	STEmployee *emp = [[STEmployee alloc] initStarterWithType:STEmployeeType_Business];
 	[self addEmployee:emp];

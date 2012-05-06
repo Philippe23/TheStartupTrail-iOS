@@ -12,7 +12,6 @@
 
 @interface STTaskTableViewController : STViewController<UIAlertViewDelegate>
 {
-	NSMutableArray *_employees;
 	unsigned _activeEmployee;
 }
 
