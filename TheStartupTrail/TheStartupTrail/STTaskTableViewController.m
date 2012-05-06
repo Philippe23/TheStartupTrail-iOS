@@ -162,25 +162,49 @@
 	int idx = [self.employees indexOfObject:emp];
 	assert(idx >= 0);
 	
+	NSString *imgName = nil;
+	switch (emp.employeeType)
+	{
+		case STEmployeeType_Business:
+			imgName = @"biz_man";
+			break;
+		
+		case STEmployeeType_Designer:
+			imgName = @"designer";
+			break;
+		
+		case STEmployeeType_Developer:
+			imgName = @"developer";
+			break;
+	}
+	assert(imgName);
+	UIImage *img = [UIImage imageNamed:imgName];
+	assert(img);
+	
+	
 	if (idx == 0)
 	{
 		self.employeeName1.text = emp.name;
 		self.employeeNameplate1.hidden = NO;
+		[self.employee1 setImage:img forState:UIControlStateNormal];
 	}
 	else if (idx == 1)
 	{
 		self.employeeName2.text = emp.name;
 		self.employeeNameplate2.hidden = NO;
+		[self.employee2 setImage:img forState:UIControlStateNormal];
 	}
 	else if (idx == 2)
 	{
 		self.employeeName3.text = emp.name;
 		self.employeeNameplate3.hidden = NO;
+		[self.employee3 setImage:img forState:UIControlStateNormal];
 	}
 	else if (idx == 3)
 	{
 		self.employeeName4.text = emp.name;
 		self.employeeNameplate4.hidden = NO;
+		[self.employee4 setImage:img forState:UIControlStateNormal];
 	}
 	else assert(0);
 }

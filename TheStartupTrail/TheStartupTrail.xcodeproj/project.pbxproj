@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		182025401555A89200A35137 /* STEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820253F1555A89200A35137 /* STEmployee.m */; };
 		183CBEEC1555A42600E9CB41 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 183CBEEB1555A42600E9CB41 /* background.png */; };
+		18573C5B1555FAA000CCFF6B /* biz_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 18573C581555FAA000CCFF6B /* biz_man.png */; };
+		18573C5C1555FAA000CCFF6B /* designer.png in Resources */ = {isa = PBXBuildFile; fileRef = 18573C591555FAA000CCFF6B /* designer.png */; };
+		18573C5D1555FAA000CCFF6B /* developer.png in Resources */ = {isa = PBXBuildFile; fileRef = 18573C5A1555FAA000CCFF6B /* developer.png */; };
 		1859C9121555C6330083B9A4 /* design.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90C1555C6330083B9A4 /* design.png */; };
 		1859C9131555C6330083B9A4 /* devel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90D1555C6330083B9A4 /* devel.png */; };
 		1859C9141555C6330083B9A4 /* maint.png in Resources */ = {isa = PBXBuildFile; fileRef = 1859C90E1555C6330083B9A4 /* maint.png */; };
@@ -39,6 +42,9 @@
 		1820253E1555A89200A35137 /* STEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STEmployee.h; sourceTree = "<group>"; };
 		1820253F1555A89200A35137 /* STEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STEmployee.m; sourceTree = "<group>"; };
 		183CBEEB1555A42600E9CB41 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		18573C581555FAA000CCFF6B /* biz_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biz_man.png; sourceTree = "<group>"; };
+		18573C591555FAA000CCFF6B /* designer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = designer.png; sourceTree = "<group>"; };
+		18573C5A1555FAA000CCFF6B /* developer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = developer.png; sourceTree = "<group>"; };
 		1859C90C1555C6330083B9A4 /* design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design.png; sourceTree = "<group>"; };
 		1859C90D1555C6330083B9A4 /* devel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devel.png; sourceTree = "<group>"; };
 		1859C90E1555C6330083B9A4 /* maint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maint.png; sourceTree = "<group>"; };
@@ -152,6 +158,9 @@
 				188AE5F615559A63000961D4 /* desk.png */,
 				188AE5F715559A63000961D4 /* fire.png */,
 				188AE5F815559A63000961D4 /* guy_tie.png */,
+				18573C581555FAA000CCFF6B /* biz_man.png */,
+				18573C591555FAA000CCFF6B /* designer.png */,
+				18573C5A1555FAA000CCFF6B /* developer.png */,
 				188AE5F915559A63000961D4 /* hire.png */,
 				188AE5FA15559A63000961D4 /* research.png */,
 				188AE5FB15559A63000961D4 /* top_bar.png */,
@@ -234,6 +243,9 @@
 				1859C9161555C6330083B9A4 /* salesMark.png in Resources */,
 				1859C9171555C6330083B9A4 /* uxresearch.png in Resources */,
 				185DFE191555F28B004F42B6 /* office_plaque.png in Resources */,
+				18573C5B1555FAA000CCFF6B /* biz_man.png in Resources */,
+				18573C5C1555FAA000CCFF6B /* designer.png in Resources */,
+				18573C5D1555FAA000CCFF6B /* developer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
