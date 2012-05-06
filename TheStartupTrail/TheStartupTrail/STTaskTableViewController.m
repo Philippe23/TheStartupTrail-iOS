@@ -335,12 +335,12 @@
 	STGameState *state = [STGameState sharedGameState];
 	struct MonthlyNumbers *mn = [state getThisMonthsNumbers];
 	
+	self.turnLabel.text = [NSString stringWithFormat:@"%u", mn->turnNum];
+	
 	[self setCustomerCount:mn->numCustomers];
 	[self setProductCount:mn->numFeatures];
 	[self setMoneyInBank:mn->cashInBank];
 	[self setCashFlow:mn->cashFlow];
-	
-	self.turnLabel.text = [NSString stringWithFormat:@"%u", mn->turnNum];
 }
 
 - (void) updateStatusBarLayout
