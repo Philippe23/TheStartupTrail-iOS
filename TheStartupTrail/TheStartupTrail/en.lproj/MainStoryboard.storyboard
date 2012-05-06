@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="tCd-zP-sjd">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -203,6 +203,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Z3X-By-LT3" kind="push" id="hXX-ds-ToK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -303,6 +306,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Svi-iL-Rqw"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="cashFlowLabel" destination="Phg-Tp-wOo" id="Zgh-VD-LWy"/>
@@ -335,7 +339,50 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-295" y="262"/>
+            <point key="canvasLocation" x="-714" y="306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6vI-EC-79b">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BN8-9v-Ci0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="tCd-zP-sjd" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="O0h-Bz-Vfb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="oQ5-vM-I7v"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1415" y="393"/>
+        </scene>
+        <!--Sponsor Hack View Controller View Controller-->
+        <scene sceneID="vee-7b-aoX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paz-Pg-qJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Z3X-By-LT3" customClass="STSponsorHackViewControllerViewController" sceneMemberID="viewController">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="amY-s8-fQN">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal" backgroundImage="sponsors_screen.png">
+                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="popOffNav:" destination="Z3X-By-LT3" eventType="touchUpInside" id="S39-qn-HMd"/>
+                        </connections>
+                    </button>
+                    <navigationItem key="navigationItem" id="2hk-6a-jTq"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-513" y="881"/>
         </scene>
     </scenes>
     <resources>
@@ -349,9 +396,16 @@
         <image name="mood_bars.png" width="83" height="47"/>
         <image name="office_plaque.png" width="155" height="50"/>
         <image name="product.png" width="18" height="21"/>
+        <image name="sponsors_screen.png" width="961" height="641"/>
         <image name="top_bar.png" width="961" height="69"/>
     </resources>
     <classes>
+        <class className="STSponsorHackViewControllerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/STSponsorHackViewControllerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="popOffNav:"/>
+            </relationships>
+        </class>
         <class className="STTaskTableViewController" superclassName="STViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskTableViewController.h"/>
             <relationships>
