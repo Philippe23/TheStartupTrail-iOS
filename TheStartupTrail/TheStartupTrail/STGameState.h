@@ -77,4 +77,6 @@ struct MonthlyNumbers
 
 - (void) updateNumbers;
 
+- (struct MonthlyNumbers*) getThisMonthsNumbers;
+
 @end

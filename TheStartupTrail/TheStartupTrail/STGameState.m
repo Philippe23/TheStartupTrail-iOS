@@ -50,7 +50,7 @@ STGameState *f_game_state = nil;
 		
 		struct MonthlyNumbers *mn = &f_game_state->_numbers[0];
 		mn->turnNum = 0;
-		mn->cashFlow = 100000;
+		mn->cashInBank = 100000;
 		mn->numCustomers = 0;
 		mn->customersWon = 0;
 		mn->customersLost = 0;
@@ -70,6 +70,8 @@ STGameState *f_game_state = nil;
 		mn->design = 0;
 		mn->complexity = 0;
 		mn->maint = 0;
+		
+		[f_game_state nextTurn];
 	}
 	
 	return f_game_state;
@@ -86,30 +88,25 @@ STGameState *f_game_state = nil;
 	self.turnNumber = i + 1;
 	self->_numbers = realloc(
 		self->_numbers, 
-		sizeof(self->_numbers[0]) * self.turnNumber);
+		sizeof(self->_numbers[0]) * (self.turnNumber+1));
 	assert(self->_numbers);
 	
 	memcpy(
+		&self->_numbers[i+1],
 		&self->_numbers[i],
-		&self->_numbers[i-1],
 		sizeof(self->_numbers[0]) );
+	
+	self->_numbers[i+1].turnNum = self.turnNumber;
+	if (self.turnNumber > 1)
+		[self updateNumbers];
 }
 
 - (void) updateNumbers
 {
-	unsigned const i = self.turnNumber-1;
-	struct MonthlyNumbers start_nums;
-	struct MonthlyNumbers const *last_mn = &self->_numbers[i-1];
-	struct MonthlyNumbers *mn = &self->_numbers[i];
-	
-	memset(&start_nums, 0, sizeof(start_nums));
-	
-	if (i < 1)
-	{
-		last_mn = &start_nums;
-		start_nums.cashInBank = mn->cashInBank;
-	}
-	
+	assert(self.turnNumber > 0);
+	struct MonthlyNumbers *mn = [self getThisMonthsNumbers];
+	struct MonthlyNumbers const *last_mn = (mn - 1);
+		
 	mn->customersWon  = last_mn->sales * self->customersPerBiz;
 	mn->customersWon += last_mn->numFeatures * self->customersPerFeature;
 	mn->customersWon += last_mn->sales * last_mn->numFeatures * self->customersPerBizPerFeature;
@@ -164,6 +161,13 @@ STGameState *f_game_state = nil;
 	mn->cashFlow = mn->revenue - mn->expenses;
 	
 	mn->cashInBank = last_mn->cashInBank + mn->cashFlow;
+}
+
+- (struct MonthlyNumbers*) getThisMonthsNumbers
+{
+	unsigned i = self.turnNumber;
+	assert(i > 0);
+	return &self->_numbers[i-1];
 }
 
 @end
