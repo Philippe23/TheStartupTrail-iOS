@@ -23,6 +23,7 @@
 @synthesize custCountIcon, custCountInner, custCountOuter, custCountLabel;
 @synthesize productCountIcon, productCountInner, productCountOutter, productCountLabel;
 @synthesize moneyInBankLabel, cashFlowLabel;
+@synthesize turnLabel;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -338,6 +339,8 @@
 	[self setProductCount:mn->numFeatures];
 	[self setMoneyInBank:mn->cashInBank];
 	[self setCashFlow:mn->cashFlow];
+	
+	self.turnLabel.text = [NSString stringWithFormat:@"%u", mn->turnNum];
 }
 
 - (void) updateStatusBarLayout

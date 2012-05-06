@@ -44,6 +44,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *productCountLabel;
 @property (retain, nonatomic) IBOutlet UILabel *moneyInBankLabel;
 @property (retain, nonatomic) IBOutlet UILabel *cashFlowLabel;
+@property (retain, nonatomic) IBOutlet UILabel *turnLabel;
 
 - (IBAction) assignTaskToEmployee:(id)sender;
 - (IBAction) endTurn:(id)sender;
