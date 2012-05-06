@@ -41,6 +41,8 @@
 		18BC4B891555FFA000111F30 /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC4B851555FFA000111F30 /* money.png */; };
 		18BC4B8A1555FFA000111F30 /* product.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC4B861555FFA000111F30 /* product.png */; };
 		18BC4B8D155600DA00111F30 /* mood_bars.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC4B8C155600DA00111F30 /* mood_bars.png */; };
+		18F847721556DE4200D9C6BE /* iOS-Icon-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F847711556DE4200D9C6BE /* iOS-Icon-iPhone.png */; };
+		18F847771556DEAD00D9C6BE /* iOS-Icon-iPhone57.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F847761556DEAD00D9C6BE /* iOS-Icon-iPhone57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		18BC4B851555FFA000111F30 /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
 		18BC4B861555FFA000111F30 /* product.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = product.png; sourceTree = "<group>"; };
 		18BC4B8C155600DA00111F30 /* mood_bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mood_bars.png; sourceTree = "<group>"; };
+		18F847711556DE4200D9C6BE /* iOS-Icon-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS-Icon-iPhone.png"; path = "../iOS-Icon-iPhone.png"; sourceTree = "<group>"; };
+		18F847761556DEAD00D9C6BE /* iOS-Icon-iPhone57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iOS-Icon-iPhone57.png"; path = "../iOS-Icon-iPhone57.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 		188AE5F315559A4B000961D4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				18F847711556DE4200D9C6BE /* iOS-Icon-iPhone.png */,
+				18F847761556DEAD00D9C6BE /* iOS-Icon-iPhone57.png */,
 				183CBEEB1555A42600E9CB41 /* background.png */,
 				188AE5F515559A63000961D4 /* bottom_bar.png */,
 				188AE5F615559A63000961D4 /* desk.png */,
@@ -266,6 +272,8 @@
 				18BC4B891555FFA000111F30 /* money.png in Resources */,
 				18BC4B8A1555FFA000111F30 /* product.png in Resources */,
 				18BC4B8D155600DA00111F30 /* mood_bars.png in Resources */,
+				18F847721556DE4200D9C6BE /* iOS-Icon-iPhone.png in Resources */,
+				18F847771556DEAD00D9C6BE /* iOS-Icon-iPhone57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
