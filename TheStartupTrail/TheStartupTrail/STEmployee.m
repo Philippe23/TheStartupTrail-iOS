@@ -13,7 +13,7 @@
 
 @synthesize employeeType = _type;
 @synthesize level = _level;
-@synthesize name;
+@synthesize name, task;
 
 - (id) initWithName:(NSString *)n type:(STEmployeeType)t andLevel:(unsigned)lvl
 {
@@ -23,6 +23,7 @@
 		self.name = n;
 		self->_type = t;
 		self->_level = lvl;
+		self.task = STEmployeeTask_None;
 	}
 	
 	return self;

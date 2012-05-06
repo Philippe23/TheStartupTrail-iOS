@@ -15,6 +15,18 @@ typedef enum _STEmployeeType
 	STEmployeeType_Business,	
 } STEmployeeType;
 
+typedef enum _STEmployeeTask
+{
+	STEmployeeTask_None,
+
+	STEmployeeTask_UX_Design,
+	STEmployeeTask_Design,
+	STEmployeeTask_Maint,
+	STEmployeeTask_NewDev,
+	STEmployeeTask_MarketResearch,
+	STEmployeeTask_Sales,
+} STEmployeeTask;
+
 @interface STEmployee : NSObject
 {
 	STEmployeeType _type;	
@@ -24,6 +36,7 @@ typedef enum _STEmployeeType
 @property (assign, readonly) STEmployeeType employeeType;
 @property (assign, readonly) unsigned level;
 @property (retain) NSString *name;
+@property (assign) STEmployeeTask task;
 
 - (id) initWithName:(NSString*)name type:(STEmployeeType)type andLevel:(unsigned)level;
 - (id) initStarterWithType:(STEmployeeType)type;
