@@ -155,11 +155,12 @@
 
 - (IBAction) endTurn:(id)sender
 {
-	static unsigned x = 0;
+	STGameState *gstate = [STGameState sharedGameState];
 	
-	x += 23;
+	[gstate nextTurn];
+	[gstate updateNumbers];
 	
-	[self setCustomerCount:x];
+	[self updateStatusBarData];
 }
 
 
@@ -316,7 +317,6 @@
 	if (cash < 0.0f)
 	{
 		self.cashFlowLabel.textColor = [UIColor redColor];
-		str = [str stringByAppendingFormat:@"(%@)", str];
 	}
 	else
 	{
@@ -333,6 +333,7 @@
 - (void) updateStatusBarData
 {
 	STGameState *state = [STGameState sharedGameState];
+	[state updateNumbers];
 	struct MonthlyNumbers *mn = [state getThisMonthsNumbers];
 	
 	self.turnLabel.text = [NSString stringWithFormat:@"%u", mn->turnNum];
