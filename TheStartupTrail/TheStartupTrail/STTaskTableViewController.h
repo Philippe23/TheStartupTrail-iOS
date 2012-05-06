@@ -62,6 +62,8 @@
 - (void) setMoneyInBank:(int64_t)money;
 - (void) setCashFlow:(int64_t)cash;
 
+- (void) updateStatusBarData;
+
 - (void) updateStatusBarLayout;
 - (void) sizeBox:(UIView*)outerBox innerBox:(UIView*)innerbox icon:(UIImageView*)icon toFitLabel:(UILabel*)label;
 

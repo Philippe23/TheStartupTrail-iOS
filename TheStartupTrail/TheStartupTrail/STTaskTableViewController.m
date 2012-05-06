@@ -8,6 +8,7 @@
 
 #import "STTaskTableViewController.h"
 #import "STEmployee.h"
+#import "STGameState.h"
 
 @interface STTaskTableViewController ()
 
@@ -44,6 +45,8 @@
 	
 	for (STEmployee *e in self.employees)
 		[self updateEmployeeNameTag:e];
+	
+	[self updateStatusBarData];
 }
 
 - (void)viewDidUnload
@@ -323,6 +326,16 @@
 }
 
 
+- (void) updateStatusBarData
+{
+	STGameState *state = [STGameState sharedGameState];
+	struct MonthlyNumbers *mn = [state getThisMonthsNumbers];
+	
+	[self setCustomerCount:mn->numCustomers];
+	[self setProductCount:mn->numFeatures];
+	[self setMoneyInBank:mn->cashInBank];
+	[self setCashFlow:mn->cashFlow];
+}
 
 - (void) updateStatusBarLayout
 {
