@@ -21,6 +21,7 @@
 @synthesize employeeTaskImg1, employeeTaskImg2, employeeTaskImg3, employeeTaskImg4;
 @synthesize employee1, employee2, employee3, employee4;
 @synthesize custCountIcon, custCountInner, custCountOuter, custCountLabel;
+@synthesize productCountIcon, productCountInner, productCountOutter, productCountLabel;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -272,12 +273,28 @@
 	[self updateStatusBarLayout];
 }
 
+- (void) setProductCount:(unsigned int)count
+{
+	NSNumber *num = [[NSNumber alloc] initWithUnsignedInt:count];
+	NSString *str = [NSNumberFormatter localizedStringFromNumber:num numberStyle:NSNumberFormatterDecimalStyle];
+	[num release], num = nil;
+	
+	self.productCountLabel.text = str;
+	
+	[self updateStatusBarLayout];
+}
+
 - (void) updateStatusBarLayout
 {
 	[self sizeBox:self.custCountOuter
 		 innerBox:self.custCountInner
 			 icon:self.custCountIcon
 	   toFitLabel:self.custCountLabel];
+
+	[self sizeBox:self.productCountOutter
+		 innerBox:self.productCountInner
+			 icon:self.productCountIcon
+	   toFitLabel:self.productCountLabel];
 }
 
 - (void) sizeBox:(UIView *)outerBox 

@@ -314,10 +314,14 @@
                         <outlet property="employeeTaskImg2" destination="ATU-Ho-cJg" id="mzb-Dy-cvH"/>
                         <outlet property="employeeTaskImg3" destination="v8E-15-RQS" id="kM0-Pu-aDm"/>
                         <outlet property="employeeTaskImg4" destination="Cu5-BQ-gaE" id="qFZ-TG-5C5"/>
+                        <outlet property="productCountIcon" destination="pAC-1I-EZG" id="h4A-la-An5"/>
+                        <outlet property="productCountInner" destination="1zh-vB-L7f" id="COs-ms-RKh"/>
+                        <outlet property="productCountLabel" destination="7HE-P1-A6C" id="NJP-Ab-pNY"/>
+                        <outlet property="productCountOutter" destination="OEM-x9-YcF" id="rzz-bA-jxi"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-55" y="149"/>
+            <point key="canvasLocation" x="-295" y="262"/>
         </scene>
     </scenes>
     <resources>
@@ -358,6 +362,10 @@
                 <relationship kind="outlet" name="employeeTaskImg2" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeTaskImg3" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="employeeTaskImg4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="productCountIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="productCountInner" candidateClass="UIView"/>
+                <relationship kind="outlet" name="productCountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="productCountOutter" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="STViewController" superclassName="UIViewController">
