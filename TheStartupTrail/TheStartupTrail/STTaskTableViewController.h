@@ -35,7 +35,13 @@
 @property (retain, nonatomic) IBOutlet UIButton* employee3;
 @property (retain, nonatomic) IBOutlet UIButton* employee4;
 
+@property (retain, nonatomic) IBOutlet UIView *custCountOuter;
+@property (retain, nonatomic) IBOutlet UIView *custCountInner;
+@property (retain, nonatomic) IBOutlet UIImageView *custCountIcon;
+@property (retain, nonatomic) IBOutlet UILabel *custCountLabel;
+
 - (IBAction) assignTaskToEmployee:(id)sender;
+- (IBAction) endTurn:(id)sender;
 
 
 - (void) addEmployee:(STEmployee*)emp;
@@ -44,5 +50,10 @@
 - (void) onStartTurn;
 
 - (unsigned) getEmployeeNumFromButton:(UIButton*)button;
+
+- (void) setCustomerCount:(unsigned)customerCount;
+
+- (void) updateStatusBarLayout;
+- (void) sizeBox:(UIView*)outerBox innerBox:(UIView*)innerbox icon:(UIImageView*)icon toFitLabel:(UILabel*)label;
 
 @end

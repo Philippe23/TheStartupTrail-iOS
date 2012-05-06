@@ -20,6 +20,7 @@
 @synthesize employeeNameplate1, employeeNameplate2, employeeNameplate3, employeeNameplate4;
 @synthesize employeeTaskImg1, employeeTaskImg2, employeeTaskImg3, employeeTaskImg4;
 @synthesize employee1, employee2, employee3, employee4;
+@synthesize custCountIcon, custCountInner, custCountOuter, custCountLabel;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -147,6 +148,15 @@
 	[alert show];
 }
 
+- (IBAction) endTurn:(id)sender
+{
+	static unsigned x = 0;
+	
+	x += 23;
+	
+	[self setCustomerCount:x];
+}
+
 
 #pragma mark - Employeemanagement
 
@@ -249,6 +259,68 @@
 	
 	assert(0);
 	return 999;
+}
+
+- (void) setCustomerCount:(unsigned int)customerCount
+{
+	NSNumber *num = [[NSNumber alloc] initWithUnsignedInt:customerCount];
+	NSString *str = [NSNumberFormatter localizedStringFromNumber:num numberStyle:NSNumberFormatterDecimalStyle];
+	[num release], num = nil;
+	
+	self.custCountLabel.text = str;
+	
+	[self updateStatusBarLayout];
+}
+
+- (void) updateStatusBarLayout
+{
+	[self sizeBox:self.custCountOuter
+		 innerBox:self.custCountInner
+			 icon:self.custCountIcon
+	   toFitLabel:self.custCountLabel];
+}
+
+- (void) sizeBox:(UIView *)outerBox 
+		innerBox:(UIView *)innerbox 
+			icon:(UIImageView *)icon
+	  toFitLabel:(UILabel *)label
+{
+	CGSize const labelSize = [label.text sizeWithFont:label.font];
+	CGFloat width = labelSize.width;
+	
+	width += 2.0f * 3;
+	width += icon.bounds.size.width;
+	
+	CGRect fr = innerbox.frame;
+	fr.size.width = width;
+	innerbox.frame = fr;
+	
+	fr = icon.frame;
+	fr.origin = CGPointMake(2.0f, 2.0f);
+	icon.frame = fr;
+	width = fr.size.width;
+	
+	fr = label.frame;
+	fr.origin.x  = 2.0f * 2;
+	fr.origin.x += width;
+	fr.origin.y  = 2.0f;
+	fr.size.width = labelSize.width;
+	label.frame = fr;
+	
+	fr = outerBox.frame;
+	fr.size.width  = innerbox.bounds.size.width;
+	fr.size.width += 2.0f * 2;
+	outerBox.frame = fr;
+
+	// :HACK: There's some reason I need to do this all
+	//        twice every once in a while.
+	static int size_hack_first = 0;
+	if (size_hack_first == 0)
+	{
+		size_hack_first = 1;
+		[self sizeBox:outerBox innerBox:innerbox icon:icon toFitLabel:label];
+	}
+	else size_hack_first = 0;
 }
 
 @end

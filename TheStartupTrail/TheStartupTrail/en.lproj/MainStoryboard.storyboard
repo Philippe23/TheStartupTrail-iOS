@@ -138,7 +138,7 @@
                                                         <rect key="frame" x="1" y="1" width="14" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="PlV-8t-bgt">
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5,000" lineBreakMode="tailTruncation" minimumFontSize="7" adjustsFontSizeToFit="NO" id="PlV-8t-bgt">
                                                         <rect key="frame" x="16" y="1" width="43" height="14"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -177,6 +177,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="endTurn:" destination="2" eventType="touchUpInside" id="cSj-cu-aIP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fwM-1z-aGw">
                                         <rect key="frame" x="9" y="7" width="156" height="37"/>
@@ -291,6 +294,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="custCountIcon" destination="vxH-cy-RVR" id="Kmb-Oy-fgN"/>
+                        <outlet property="custCountInner" destination="xAt-hU-p2o" id="RT0-j9-M0a"/>
+                        <outlet property="custCountLabel" destination="PlV-8t-bgt" id="PLK-aN-idx"/>
+                        <outlet property="custCountOuter" destination="4mR-3t-sPg" id="Vx9-cE-URM"/>
                         <outlet property="employee1" destination="X63-U0-Ik3" id="oWI-ra-lUY"/>
                         <outlet property="employee2" destination="3wj-J6-bQI" id="zjd-KT-pPi"/>
                         <outlet property="employee3" destination="hD5-Sp-UQG" id="BPE-xX-Jdq"/>
@@ -310,7 +317,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="4" y="148"/>
+            <point key="canvasLocation" x="-55" y="149"/>
         </scene>
     </scenes>
     <resources>
@@ -330,6 +337,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/STTaskTableViewController.h"/>
             <relationships>
                 <relationship kind="action" name="assignTaskToEmployee:"/>
+                <relationship kind="action" name="endTurn:"/>
+                <relationship kind="outlet" name="custCountIcon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="custCountInner" candidateClass="UIView"/>
+                <relationship kind="outlet" name="custCountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="custCountOuter" candidateClass="UIView"/>
                 <relationship kind="outlet" name="employee1" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="employee2" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="employee3" candidateClass="UIButton"/>
